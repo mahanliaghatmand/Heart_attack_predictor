@@ -1,0 +1,9 @@
+gradio==5.9.1
+numpy==1.26.4
+pandas==2.2.3
+# scikit-learn: match (or use a version >=) whatever produced OneHotEncoder.pkl
+# in the training notebook to avoid the "InconsistentVersionWarning" pickle warning.
+scikit-learn>=1.5.2
+tensorflow-cpu==2.17.0
+evidently==0.4.33
+clearml==1.16.5

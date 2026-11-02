@@ -1,0 +1,13 @@
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+extend-exclude = ["notebooks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+# schema.py keeps long one-line Feature(...) rows on purpose (see "fmt: off").
+per-file-ignores = { "heart_app/schema.py" = ["E501"], "heart_app/i18n.py" = ["E501"] }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::sklearn.exceptions.InconsistentVersionWarning"]
